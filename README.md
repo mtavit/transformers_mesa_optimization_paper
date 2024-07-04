@@ -1,4 +1,4 @@
-# Uncovering mesa-optimization algorithms in Transformers (Code-Base)
+# Uncovering mesa-optimization algorithms in Transformers (Codebase)
 
 Here you can find the codebase for our paper, "Uncovering mesa-optimization algorithms in Transformers".
 
