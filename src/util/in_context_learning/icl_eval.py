@@ -118,12 +118,7 @@ class ICLEvaluator:
             preds_lsq = self.lsq_model.predict(shifted_data=shifted_data, data=data)
             results = tuple([list((jnp.sum(((pred - target)**2), axis=(0,2))/(2*bs))) for pred,target in zip([preds_base, preds_eos, preds_prompt_eos, preds_lsq],[t2, t1, t3, t2])])
             prompt=self.prompt
-
-            # base_results = list((jnp.sum(((results[0] - t2)**2), axis=(0,2))/(2*bs)))
-            # eos_results = list((jnp.sum(((results[1] - t1)**2), axis=(0,2))/(2*bs)))
-            # prompt_eos_result = list((jnp.sum(((results[2] - t3)**2), axis=(0,2))/(2*bs)))
-            # lsq_result = list((jnp.sum(((results[3] - t2)**2), axis=(0,2))/(2*bs)))
-
+            
             base_results, eos_results, prompt_eos_result, lsq_result = results
 
             task1_len = self.task1_len
