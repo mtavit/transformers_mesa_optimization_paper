@@ -5,7 +5,7 @@ Here you can find the codebase for our paper, "Uncovering mesa-optimization algo
 ## Usage
 
 You can use this codebase to replicate and extend our experiments with various Transformer-models.
-The codebase is split into four main parts:
+The codebase contains:
 
     - src: Here you can find our implementation of various models, data-generators, finetuning modules, training routines and especially of all relevant experiments (in 'util') such as e.g. in the file 'sequenceloss_eval.py', which implements an analysis of models on a test-set of sequences and reports their performance at each time-step.
 
